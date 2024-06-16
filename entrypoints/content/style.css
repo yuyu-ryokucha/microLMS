@@ -1,0 +1,83 @@
+:root {
+    --color_level-Max: #000000;
+    --color_level-10: #5b015b;
+    --color_level-5: #FF4B00;
+    --color_level-4: #F6AA00;
+    --color_level-3: #e9d931;
+    --color_level-2: #40e0a0;
+    --color_level-1: #79acff;
+}
+
+
+/* カスタムフォント */
+body.setting_customfont {
+/* content_scriptへ移行 */
+}
+
+
+body {
+    span:has(> span[data-position="deadlineElembymicroLMS"]) {
+        color: #fff;
+        display: inline-block!important;
+        padding: 0.25rem;
+        font-weight: bold;
+        border-radius: 100vmax;
+    }
+
+    span:has(> span[data-position="deadlineElembymicroLMS"][data-deadline="lvMax"]) {
+        background-color: var(--color_level-Max);
+    }
+
+    span:has(> span[data-position="deadlineElembymicroLMS"][data-deadline="lv10"]) {
+        background-color: var(--color_level-10);
+    }
+
+    span:has(> span[data-position="deadlineElembymicroLMS"][data-deadline="lv5"]) {
+        background-color: var(--color_level-5);
+    }
+
+    span:has(> span[data-position="deadlineElembymicroLMS"][data-deadline="lv4"]) {
+        background-color: var(--color_level-4);
+    }
+
+    span:has(> span[data-position="deadlineElembymicroLMS"][data-deadline="lv3"]) {
+        background-color: var(--color_level-3);
+    }
+
+    span:has(> span[data-position="deadlineElembymicroLMS"][data-deadline="lv2"]) {
+        background-color: var(--color_level-2);
+    }
+
+    span:has(> span[data-position="deadlineElembymicroLMS"][data-deadline="lv1"]) {
+        background-color: var(--color_level-1);
+    }
+
+    span:has(> span[data-position="deadlineElembymicroLMS"][data-deadline="lv0"]) {
+        background-color: var(--color_level-0);
+    }
+
+    span[data-position="deadlineElembymicroLMS"] {
+        padding: 0.25rem;
+    }
+}
+
+/* 本家の改善の無効化 */
+body.setting_renewal_disabled {
+    
+    span:has(> span[data-position="deadlineElembymicroLMS"][data-deadline*="lv"]) {
+        display: none !important;
+    }
+}
+
+/* PDF */
+body.pdfexpansion {
+
+    iframe[src*="webclass"] {
+        aspect-ratio: 25 / 30;
+        display: block;
+        margin-inline: auto;
+        max-width: 620px;
+        max-height: 75vh;
+        height: auto !important;
+    }
+}
