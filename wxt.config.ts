@@ -8,15 +8,15 @@ export default defineConfig({
   }),
   manifest: {
     action: {},
-    permissions: ["activeTab", "sidePanel", "storage", ],
+    permissions: ["sidePanel", "storage", ],
     name: 'microLMS',
     description: "関大LMSの課題をわかりやすく",
-    version: "1.0.0",
+    version: "1.0.1",
     web_accessible_resources: [
       {
         "matches": ["*://kulms.tl.kansai-u.ac.jp/*"],
-        "resources": ["/font/*","/assets/*"]
-      }
+        "resources": ["/font/*"],
+      },
     ],
   },
 });

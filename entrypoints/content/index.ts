@@ -102,10 +102,11 @@ export default defineContentScript({
 
       chrome.storage.local.set({ keyclass: ArrayClass }, function () {
       });
-      /**/
+      /*
       console.log("ArrayClass"); // デバッグ用
       console.log(ArrayClass); // デバッグ用
       console.log(JSON.stringify(ArrayClass[0])); // デバッグ用
+      */
 
     }
 
@@ -165,7 +166,9 @@ export default defineContentScript({
           let TaskCountNum = TaskCount.replace(/[^0-9]/g, '');
 
           let TaskDateElem = item.querySelector('div.cm-contentsList_contentDetailListItemLabel + div.cm-contentsList_contentDetailListItemData');
+          /*
           console.log(TaskDateElem);
+          */
           let TaskDateRaw = TaskDateElem ? TaskDateElem.textContent.trim() : "nodeadline";
           let dates = TaskDateRaw.match(/(\d{4}\/\d{2}\/\d{2} \d{2}:\d{2})/g);
 
