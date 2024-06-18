@@ -6,6 +6,10 @@
 * **一方向へのスクロールだけで**全ての情報を確認できる洗練されたインターフェースがポイント。
 * こだわりの設計で大学側のサーバーへの負荷は実質ゼロ。関大LMSを普通に利用しているときに**ついでに**データを貯めるだけなので安心。
 
+## インストール
+
+* [Chrome Web Store](https://chromewebstore.google.com/detail/microlms/cfklpfmfimgdclelgdfmdgcamokkeiea)
+
 ## 利用方法
 
 ### パソコン
