@@ -64,7 +64,6 @@ const TabOfCalendar: React.FC = () => {
                   if (TimestampDiff >= -48) { ArrayTaskIDOfLv50.push(TaskNameID);
                   }
                 } else if (TimestampDiff < 24) { ArrayTaskIDOfLv5.push(TaskNameID);
-                } else if (TimestampDiff < 48) { ArrayTaskIDOfLv4.push(TaskNameID);
                 } else if (TimestampDiff < 120) { ArrayTaskIDOfLv3.push(TaskNameID);
                 } else if (TimestampDiff < 336) { ArrayTaskIDOfLv2.push(TaskNameID);
                 } 
@@ -74,7 +73,7 @@ const TabOfCalendar: React.FC = () => {
         }
       }
 
-      const ArrayHotTaskID = [ArrayTaskIDOfLv50, ArrayTaskIDOfLv5, ArrayTaskIDOfLv4, ArrayTaskIDOfLv3, ArrayTaskIDOfLv2];
+      const ArrayHotTaskID = [ArrayTaskIDOfLv50, ArrayTaskIDOfLv5, ArrayTaskIDOfLv3, ArrayTaskIDOfLv2];
       chrome.storage.local.set({ "keyhottaskid": ArrayHotTaskID }, () => {});
 
       ArrayDeadline.sort((a, b) => a.getTime() - b.getTime());

@@ -71,8 +71,7 @@
   --color_level-Max: #000000;
   --color_level-10: #5b015b;
   --color_level-5: #FF4B00;
-  --color_level-4: #F6AA00;
-  --color_level-3: #e9d931;
+  --color_level-3: #F6AA00;
   --color_level-2: #40e0a0;
   --color_level-1: #79acff;
 }
@@ -330,7 +329,7 @@ i[data-icon="lv5"]::before {
   mask-position: center center;
   mask-repeat: no-repeat;
 }
-
+/*
 i[data-icon="lv4"]::before {
   -webkit-mask-image: url(/assets/image/battery-low.svg);
   -webkit-mask-size: contain;
@@ -341,13 +340,16 @@ i[data-icon="lv4"]::before {
   mask-position: center center;
   mask-repeat: no-repeat;
 }
+*/
 
 i[data-icon="lv3"]::before {
-  -webkit-mask-image: url(/assets/image/battery-medium.svg);
+  /*-webkit-mask-image: url(/assets/image/battery-medium.svg);*/
+  -webkit-mask-image: url(/assets/image/battery-low.svg);
   -webkit-mask-size: contain;
   -webkit-mask-position: center center;
   -webkit-mask-repeat: no-repeat;
-  mask-image: url(/assets/image/battery-medium.svg);
+  /*mask-image: url(/assets/image/battery-medium.svg);*/
+  mask-image: url(/assets/image/battery-low.svg);
   mask-size: contain;
   mask-position: center center;
   mask-repeat: no-repeat;
@@ -759,6 +761,13 @@ p:has(>.deadlineitem[data-deadlineitem]) {
   /* これを入れるとWebKitで崩れるのでNG */
 }
 
+
+/* 8より大きい場合に備える */
+.deadlineitem[data-deadlineitem]::after {
+  height: 270%;
+  background-color: rgb(200 0 0 / 100%);
+}
+
 .deadlineitem[data-deadlineitem="1"]::after {
   height: 110%;
   background-color: rgb(200 0 0 / 30%);
@@ -799,22 +808,6 @@ p:has(>.deadlineitem[data-deadlineitem]) {
   background-color: rgb(200 0 0 / 100%);
 }
 
-.deadlineitem[data-deadlineitem="9"]::after,
-.deadlineitem[data-deadlineitem="10"]::after,
-.deadlineitem[data-deadlineitem="11"]::after,
-.deadlineitem[data-deadlineitem="12"]::after,
-.deadlineitem[data-deadlineitem="13"]::after,
-.deadlineitem[data-deadlineitem="14"]::after,
-.deadlineitem[data-deadlineitem="15"]::after,
-.deadlineitem[data-deadlineitem="16"]::after,
-.deadlineitem[data-deadlineitem="17"]::after,
-.deadlineitem[data-deadlineitem="18"]::after,
-.deadlineitem[data-deadlineitem="19"]::after,
-.deadlineitem[data-deadlineitem="20"]::after {
-  height: 270%;
-  background-color: rgb(200 0 0 / 100%);
-}
-
 /* ダイジェスト
 yuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuyuy */
 
@@ -842,11 +835,11 @@ span[data-position="DigestCountdown"] svg {
 #lv5-1 svg {
   background-color: var(--color_level-5);
 }
-
+/*
 #lv4-1 svg {
   background-color: var(--color_level-4);
 }
-
+*/
 #lv3-1 svg {
   background-color: var(--color_level-3);
 }

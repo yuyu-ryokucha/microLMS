@@ -81,8 +81,6 @@ const SectionAndTask: React.FC<SectionAndTaskProps> = ({ classid }) => {
       return "lv10"; // 期限後（0〜48時間）
     } else if (hoursDiff < 24) {
       return "lv5"; // 期限前（24時間未満）
-    } else if (hoursDiff < 48) {
-      return "lv4"; // 期限前（24〜48時間）
     } else if (hoursDiff < 120) {
       return "lv3"; // 期限前（48時間〜5日）
     } else if (hoursDiff < 336) {

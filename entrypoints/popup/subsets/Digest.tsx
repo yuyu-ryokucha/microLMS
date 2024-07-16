@@ -1,7 +1,7 @@
 // /entrypoints/components/Digest.tsx
 import React, { useEffect, useState } from 'react';
 
-import { Battery, BatteryWarning, BatteryLow, BatteryMedium, BatteryFull } from "lucide-react";
+import { Battery, BatteryWarning, BatteryLow, BatteryFull } from "lucide-react";
 
 
 function searchDomOfCheckedInput(lv: string) {
@@ -44,7 +44,7 @@ const Digest: React.FC = () => {
 
   // コンポーネントのマウント後にチェックされた入力を検索する
   useEffect(() => {
-    const levels = ['lv10', 'lv5', 'lv4', 'lv3', 'lv2'];
+    const levels = ['lv10', 'lv5', 'lv3', 'lv2'];
     setTimeout(() => {
       const counts = levels.reduce((acc, level) => {
         acc[level] = searchDomOfCheckedInput(level);
@@ -106,25 +106,12 @@ const Digest: React.FC = () => {
             <td id="lv5-4"></td>
           </tr>
           <tr>
-            <td id="lv4-1"><span data-position="DigestCountdown"><BatteryLow /><span>あと2日</span></span></td>
-            <td id="lv4-2">
+            <td id="lv3-1"><span data-position="DigestCountdown"><BatteryLow /><span>あと5日</span></span></td>
+            <td id="lv3-2">
               <span className='tooltip'>
                 {hotTaskIDs[2]?.length || 0}
                 <span className='tooltip-text'>
                   {renderTaskIDs(hotTaskIDs[2])}
-                </span>
-              </span>
-            </td>
-            <td id="lv4-3">{checkedInputsCount["lv4"] || 0}</td>
-            <td id="lv4-4"></td>
-          </tr>
-          <tr>
-            <td id="lv3-1"><span data-position="DigestCountdown"><BatteryMedium /><span>あと5日</span></span></td>
-            <td id="lv3-2">
-              <span className='tooltip'>
-                {hotTaskIDs[3]?.length || 0}
-                <span className='tooltip-text'>
-                  {renderTaskIDs(hotTaskIDs[3])}
                 </span>
               </span>
             </td>
@@ -135,9 +122,9 @@ const Digest: React.FC = () => {
             <td id="lv2-1"><span data-position="DigestCountdown"><BatteryFull /><span>あと14日</span></span></td>
             <td id="lv2-2">
               <span className='tooltip'>
-                {hotTaskIDs[4]?.length || 0}
+                {hotTaskIDs[3]?.length || 0}
                 <span className='tooltip-text'>
-                  {renderTaskIDs(hotTaskIDs[4])}
+                  {renderTaskIDs(hotTaskIDs[3])}
                 </span>
               </span>
             </td>

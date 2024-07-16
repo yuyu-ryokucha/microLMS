@@ -2,8 +2,7 @@
     --color_level-Max: #000000;
     --color_level-10: #5b015b;
     --color_level-5: #FF4B00;
-    --color_level-4: #F6AA00;
-    --color_level-3: #e9d931;
+    --color_level-3: #F6AA00;
     --color_level-2: #40e0a0;
     --color_level-1: #79acff;
 }
@@ -34,10 +33,6 @@ body {
 
     span:has(> span[data-position="deadlineElembymicroLMS"][data-deadline="lv5"]) {
         background-color: var(--color_level-5);
-    }
-
-    span:has(> span[data-position="deadlineElembymicroLMS"][data-deadline="lv4"]) {
-        background-color: var(--color_level-4);
     }
 
     span:has(> span[data-position="deadlineElembymicroLMS"][data-deadline="lv3"]) {
