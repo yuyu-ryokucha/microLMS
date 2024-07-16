@@ -11,7 +11,7 @@ export default defineConfig({
     permissions: ["sidePanel", "storage", ],
     name: 'microLMS',
     description: "関大LMSの課題をわかりやすく",
-    version: "1.0.1",
+    version: "1.1.0",
     web_accessible_resources: [
       {
         "matches": ["*://kulms.tl.kansai-u.ac.jp/*"],

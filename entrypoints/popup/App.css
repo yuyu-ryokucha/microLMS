@@ -405,6 +405,9 @@ a[data-position="TaskName"]:not([href*="https"]) {
 span[data-position="Timestamp"] {
   display: inline-block;
 }
+span[data-position="Timestamp"][data-old="true"] {
+  color: var(--color_level-5);
+}
 span[data-position="Timestamp"] i[data-icon] {
   height: 1lh;
   width: 1lh;

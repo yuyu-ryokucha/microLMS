@@ -149,7 +149,12 @@ const SectionAndTask: React.FC<SectionAndTaskProps> = ({ classid }) => {
   return (
     <ul className="pl-5">
       {sections[0]?.Timestamp && (
-      <span data-position="Timestamp" className='text-xs'><i data-icon="refresh-cw"></i><span>{dayjs(new Date(sections[0]?.Timestamp)).fromNow() + ""}</span></span>
+      <span 
+      data-position="Timestamp" 
+      className='text-xs'
+      data-old={dayjs().diff(dayjs(sections[0]?.Timestamp), 'hour') >= 48 ? 'true' : 'false'} 
+      >
+      <i data-icon="refresh-cw"></i><span>{dayjs(new Date(sections[0]?.Timestamp)).fromNow() + ""}</span></span>
       )}
       {sections.map((section) => (
         <li data-position="SectionWrapper" key={section.SectionId} className='list-item mb-4'>
